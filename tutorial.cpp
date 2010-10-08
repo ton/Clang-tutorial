@@ -28,7 +28,6 @@
 
 #include "clang/Sema/Sema.h"
 
-
 int main(int argc, char **argv)
 {
     if (argc < 2)
@@ -56,7 +55,7 @@ int main(int argc, char **argv)
     // --- Warning: platform dependent code. 
     headerSearchOptions.AddPath("/usr/include/linux", clang::frontend::Angled, false, false, false);
     headerSearchOptions.AddPath("/usr/include/c++/4.4/tr1", clang::frontend::Angled, false, false, false);
-    headerSearchOptions.AddPath("/usr/include/c++/4.4/bits", clang::frontend::Angled, false, false, false);
+    headerSearchOptions.AddPath("/usr/include/c++/4.4/i486-linux-gnu", clang::frontend::Angled, false, false, false);
     headerSearchOptions.AddPath("/usr/include/c++/4.4", clang::frontend::Angled, false, false, false);
     // --- End platform dependent code
     clang::ApplyHeaderSearchOptions(headerSearch, headerSearchOptions, langOptions, targetInfo->getTriple());
